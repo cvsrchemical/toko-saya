@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .product button {
+		background-color: #4CAF50;
+		color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+		
+		{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+		/* Gaya untuk slideshow */
+        .slideshow-container {
+            max-width: 750px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+        }
+
+        /* Gaya untuk tombol navigasi */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Gaya untuk caption teks */
+        .text {
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+        }
+		
+        .sidebar {
+            width: 25%;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .slide-bar {
+            width: 25%;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+		
+		
+         .footer a.google-maps-link {
+            color: #4CAF50; /* Warna hijau untuk tautan */
+            text-decoration: none;
+        }
+
+        .footer a.google-maps-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer i {
+            font-size: 24px; /* Ukuran ikon */
+            color: #4CAF50; /* Warna ikon hijau */
+            margin-right: 10px; /* Jarak antara ikon dan teks */
+        }
+
+        /* Gaya untuk ikon media sosial */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #0073e6; /* Warna saat dihover */
+        }
+		
+		.text-with-right-margin {
+            margin-right: 30px; /* Sesuaikan jarak kanan sesuai kebutuhan Anda */
+        }
+		
+		
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Mengatur posisi submenu ke bawah tautan "Contact Us" */
+    left: 0;
+    background-color: #333;
+    padding: -10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover a {
+    background-color: #333; /* Mengubah warna latar belakang tautan saat dihover */
+}
+
+.dropdown-menu li {
+    margin: 0px 0;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ hr {
+            border: 0;
+            height: 3px;
+            background: #abuabu; /* Warna latar belakang garis */
+            margin: 20px 0; /* Jarak atas dan bawah garis */
+        }
+    </style>
+</head>
+<body bgcolor="#00b4cf">
+    <header>
+        <img src="logo.JPEG" width="80" height="80" alt="Logo Toko">
+        <h1>CV. SRCHEMICAL</h1>
+        <p>Jalan Terusan Dusun IX, RT-/,-/,Kel. Bandar Setia,Kec. Percut Sei Tuan,
+		Kab. Deli Serdang,Prov. Sumatra Utara </p>
+		<p><b>&#129147; &#129147; &#129147; &#129147; &#129147; &#129147; &#129147; &#129147;</b></p>
+		<p><a href="https://maps.app.goo.gl/7ghoPnbvphifwW1J6" target="_blank">Lihat di Google Maps</a></p>
+    </header>
+		
+    <nav>
+    <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li class="dropdown">
+                    <a href="#">Contact Us &#11167</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.facebook.com/sutrisno7397/">Facebook</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=0823600015461">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/sutrisno7397/">Instagram</a></li>
+                    </ul>
+                </li>
+            </ul>
+			<hr> <!-- Ini adalah elemen garis horizontal -->
+    </nav>
+	 <p>
+<div class="slideshow-container">
+        <div class="mySlides">
+            <img src="slide1.jpeg" width="420" height="470" alt="Slide 1">
+            <div class="text" style="color: red;">Spanduk CV.SRCHEMICAL</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="slide2.jpeg" width="420" height="470" alt="Slide 2">
+            <div class="text" style="color: red;">PACKING ORDERAN YANG MAU DI KIRIM</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="slide4.jpeg" width="420" height="470" alt="Slide 3">
+            <div class="text" style="color: red;">PROSES MAU PENGANTARAN KE LOKET BUS</div>
+        </div>
+		
+		<div class="mySlides">
+            <img src="slide5.jpeg" width="420" height="470" alt="Slide 3">
+            <div class="text" style="color: red;">TOKO</div>
+        </div>
+		
+		<div class="mySlides">
+            <img src="slide6.jpeg" width="420" height="470" alt="Slide 3">
+            <div class="text" style="color: red;">OWNER & FAMILY</div>
+        </div>
+
+        <!-- Tombol navigasi -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Fungsi untuk menampilkan slide berikutnya
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Fungsi untuk menampilkan slide tertentu
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+		
+
+    </script>
+	</p></div>
+	
+     <div class="product">
+		 <img src="bening.jpeg" width="250" height="250" alt="Pengkilap Ban Dan Dasbord Bening 1ons">
+        <h2>Pengkilap Ban Dan Dasbord Bening 1ons</h2>
+        <p>Harga: RP. 10.000,00/ons</p>
+        <button onclick="orderViaWhatsApp('Pengkilap Ban Dan Dasbord Bening 1ons')">Pesan Via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+
+	</div>
+
+    <div class="product">
+        <img src="sabun.jpeg" width="250" height="250" alt="Bahan Sabun Cuci Piring">
+        <h2>Bahan Sabun Cuci Piring</h2>
+        <p>Harga: 75.000,00/Paket</p>
+        <button onclick="orderViaWhatsApp('Bahan Sabun Cuci Piring')">Pesan via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+    </div>
+	
+	<div class="product">
+        <img src="racikan.jpeg" width="250" height="250" alt="Slicond Emulusi By SRCHEMICAL">
+        <h2>Slicond Emulusi By SRCHEMICAL</h2>
+        <p>Harga: RP. 25.000,00/Paket</p>
+        <button onclick="orderViaWhatsApp('Slicond Emulusi By SRCHEMICAL')">Pesan via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+	</div>
+
+    <div class="product">
+		<img src="serat.jpg" width="350" height="250" alt="serat fiber / fiberglass / fiber mat / kainmatt / serat fibermatt 1kg">
+		<h2>serat fiber / fiberglass / fiber mat / kainmatt / serat fibermatt 1kg</h2>
+		<p>Harga: 32.000,00/KG</p>
+		<button onclick="orderViaWhatsApp('serat fiber / fiberglass / fiber mat / kainmatt / serat fibermatt 1kg')">Pesan via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+	</div>
+	
+	<div class="product">
+        <img src="bening2.png" width="250" height="250" alt="Pengkilap Ban Dan Dasbord Bening 1KG">
+        <h2>Pengkilap Ban Dan Dasbord Bening 1KG</h2>
+        <p>Harga: RP. 80.000,00/1KG</p>
+        <button onclick="orderViaWhatsApp('Pengkilap Ban Dan Dasbord Bening 1KG')">Pesan via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+	</div>
+	
+	<div class="product">
+        <img src="texa2.jpg" width="250" height="250" alt="Texapon n70t basf 1kg">
+        <h2>Texapon n70t basf 1kg</h2>
+        <p>Harga: RP. 27.000,00/1KG</p>
+        <button onclick="orderViaWhatsApp('Texapon n70t basf 1kg')">Pesan via WhatsApp</button>
+		<button onclick="window.location.href = 'https://shopee.co.id/ud.suri'">Pesan Via Shopee</button>
+	</div>
+
+    <script>
+        // Fungsi orderViaWhatsApp sama seperti sebelumnya
+        function orderViaWhatsApp(productName) {
+            var phoneNumber = '0823600015461';
+            var message = 'Saya ingin memesan ' + productName;
+            var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+            window.open(whatsappURL);
+        }
+    </script>
+
+    <div class="footer">
+		<div class="payment-methods">
+            <h3><b>Metode Pembayaran :<b></h3>
+		
+            <div class="payment-method" class="text-with-right-margin">
+                <span class="text-with-right-margin"><img src="bri2.png"  width="50" height="50" alt="BRI"></span>
+                <span class="text-with-right-margin"><img src="gopay.jpg" width="50" height="50" alt="Gopay"></span>
+                <span class="text-with-right-margin"><img src="dana.png" width="50" height="50" alt="Dana"></span>
+                <span class="text-with-right-margin"><img src="shopee.png" width="50" height="50" alt="ShopeePay"></span>
+				<p>
+				<b><span class="text-with-right-margin">BRI</span></b>
+				 <b><span class="text-with-right-margin">Gopay</span></b>
+				  <b><span class="text-with-right-margin">Dana</span></b>
+                <b><span class="text-with-right-margin">ShopeePay</span></b>
+				</p>
+            </div>
+	</div>
+	<style>
+        .payment-methods {
+            display: flex;
+            justify-content: center; /* Pusatkan elemen-elemen dalam baris */
+            align-items: center; /* Pusatkan elemen-elemen secara vertikal */
+            flex-wrap: wrap; /* Jika elemen melebihi lebar layar, pindah ke baris berikutnya */
+        }
+
+        .payment-method {
+            margin: 10px; /* Jarak antara elemen-elemen */
+            text-align: center;
+        }
+        
+        .payment-method img {
+            max-width: 100px; /* Atur lebar maksimum gambar bank */
+        }
+    </style>
+
+</body>
+</html>
